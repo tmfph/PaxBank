@@ -1,4 +1,25 @@
-h2, h3 {
+/* Effet de transition fluide pour les sections */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Animation d’apparition progressive */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Effet interactif sur les boutons */
+.button {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}h2, h3 {
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
