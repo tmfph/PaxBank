@@ -1,48 +1,76 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PaxBank - Finance Éthique</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>PaxBank 🚀</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="services.html">Nos Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Construisons l’avenir ensemble !</h2>
-            <p>Une banque innovante, alignée sur tes valeurs et ton éthique.</p>
-        </section>
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(120deg, #0044cc, #6610f2);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
 
-        <section class="features">
-            <div class="feature">
-                <h3>🔒 Sécurité avancée</h3>
-                <p>Biométrie et AI pour des transactions ultra sécurisées.</p>
-            </div>
-            <div class="feature">
-                <h3>💡 Transparence totale</h3>
-                <p>Un modèle financier sans intérêts, respectueux de tes principes.</p>
-            </div>
-            <div class="feature">
-                <h3>📱 Accessibilité optimale</h3>
-                <p>Une plateforme pensée pour l’expérience mobile et intuitive.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 PaxBank - Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+.hero {
+    margin-top: 30px;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.4s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.feature:hover {
+    transform: scale(1.08);
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+}
