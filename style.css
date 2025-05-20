@@ -1,39 +1,48 @@
-body {
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(120deg, #007bff, #6610f2);
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    animation: fadeIn 1s ease-in-out;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaxBank - Finance Éthique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PaxBank 🚀</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Construisons l’avenir ensemble !</h2>
+            <p>Une banque innovante, alignée sur tes valeurs et ton éthique.</p>
+        </section>
 
-/* Animation d'apparition */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-.feature {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 15px;
-    width: 200px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.feature:hover {
-    transform: scale(1.05);
-}
+        <section class="features">
+            <div class="feature">
+                <h3>🔒 Sécurité avancée</h3>
+                <p>Biométrie et AI pour des transactions ultra sécurisées.</p>
+            </div>
+            <div class="feature">
+                <h3>💡 Transparence totale</h3>
+                <p>Un modèle financier sans intérêts, respectueux de tes principes.</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Accessibilité optimale</h3>
+                <p>Une plateforme pensée pour l’expérience mobile et intuitive.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 PaxBank - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
