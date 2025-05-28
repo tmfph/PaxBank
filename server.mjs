@@ -2,6 +2,16 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.listen(3000, () => {
+  console.log('✅ PaxBank est en ligne sur le port 3000 !');
+});
+
+const express = require('express');
+const path = require('path');
+const app = express();
+
 // Servir les fichiers statiques
 app.use(express.static(path.join(__dirname)));
 
