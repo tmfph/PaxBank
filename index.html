@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PaxBank 🚀</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PaxBank - Votre Banque en Ligne</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>PaxBank 🚀</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Nos Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Bienvenue sur PaxBank !</h2>
-            <p>Une banque innovante, alignée sur tes valeurs et ton éthique.</p>
-            <button id="login-btn">🔑 Se connecter</button>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 PaxBank - Tous droits réservés.</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <div class="logo">
+      <!-- Remplacez "logo.png" par le chemin vers votre logo réel -->
+      <img src="logo.png" alt="PaxBank Logo" id="logo">
+      <h1>PaxBank</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#se-connecter">Se Connecter</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="accueil">
+    <h2>Bienvenue à PaxBank</h2>
+    <p>Votre plateforme bancaire moderne et sécurisée.</p>
+    <button onclick="location.href='#se-connecter'">Commencer</button>
+  </section>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <p>Transactions sécurisées, gestion des comptes, conseils financiers.</p>
+    <div class="services-list">
+      <div class="service">
+         <h3>Transfert</h3>
+         <p>Transferts instantanés et sécurisés.</p>
+      </div>
+      <div class="service">
+         <h3>Investissement</h3>
+         <p>Conseils financiers personnalisés.</p>
+      </div>
+      <div class="service">
+         <h3>Support</h3>
+         <p>Assistance 24/7 pour vos besoins.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="se-connecter">
+    <h2>Se Connecter</h2>
+    <form>
+      <input type="email" placeholder="Votre email" required>
+      <input type="password" placeholder="Mot de passe" required>
+      <button type="submit">Connexion</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PaxBank. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
