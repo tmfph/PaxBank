@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PaxBank - Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur PaxBank</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Accueil</a></li>
+                <li><a href="{{ url_for('register_page') }}">Inscription</a></li>
+                <li><a href="{{ url_for('login_page') }}">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <p>Votre plateforme bancaire sécurisée et innovante.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 PaxBank, Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+cat > PaxBank/templates/register.html
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - PaxBank</title>
+</head>
+<body>
+    <h1>Inscription</h1>
+    <form action="/register" method="post">
+        <label for="username">Nom d'utilisateur (min. 8 caractères):</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Mot de passe (min. 8 caractères):</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="S'inscrire">
+    </form>
+    <p>Déjà inscrit ? <a href="{{ url_for('login_page') }}">Connecte-toi</a></p>
+</body>
+</html>
+cat > PaxBank/templates/login.html
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - PaxBank</title>
+</head>
+<body>
+    <h1>Connexion</h1>
+    {% if error %}
+      <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/login" method="post">
+        <label for="username">Nom d'utilisateur:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Se connecter">
+    </form>
+    <p>Pas encore inscrit ? <a href="{{ url_for('register_page') }}">Inscris-toi</a></p>
+</body>
+</html>
+cat > PaxBank/templates/secure.html
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Protégé - PaxBank</title>
+</head>
+<body>
+    <h1>Bienvenue, {{ user }} !</h1>
+    <p>Ceci est une zone réservée aux utilisateurs authentifiés.</p>
+    <a href="{{ url_for('home') }}">Retour à l'accueil</a>
+</body>
+</html>
+cat > PaxBank/static/style.css
+python PaxBank/server.py
+

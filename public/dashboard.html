@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PaxBank - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tableau de Bord</h1>
+    </header>
+    <main>
+        <p id="welcome"></p>
+        <h2>Historique des Transactions</h2>
+        <ul id="transactions"></ul>
+    </main>
+    <script>
+        document.getElementById("welcome").innerText = "Bonjour, " + sessionStorage.getItem("username") + "!";
+        const transactions = ["Dépôt: 100€", "Retrait: 50€", "Paiement: 20€"];
+        document.getElementById("transactions").innerHTML = transactions.map(t => "<li>" + t + "</li>").join("");
+    </script>
+</body>
+</html>

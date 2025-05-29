@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - PaxBank</title>
+</head>
+<body>
+    <h1>Inscription</h1>
+    <form action="/register" method="post">
+        <label for="username">Nom d'utilisateur (min. 8 caractères):</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Mot de passe (min. 8 caractères):</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="S'inscrire">
+    </form>
+    <p>Déjà inscrit ? <a href="{{ url_for('login_page') }}">Connecte-toi</a></p>
+</body>
+</html>
