@@ -7,14 +7,13 @@ git add .
 git commit -m "Déploiement automatique"
 git push origin main
 
-# Étape 2 : Déclencher le déploiement Render via API (si ton compte le permet)
-curl -X POST -H "Authorization: Bearer TON_API_KEY" "https://api.render.com/deploy/TON_PROJET"
+# Étape 2 : Déclencher le déploiement Render via API
+curl -X POST -H "Authorization: Bearer rnd_83vfOW" "https://api.render.com/v1/services/VOTRE_PROJET_ID/deploys"
 
 echo "🎯 Déploiement en cours... Vérification dans quelques instants"
 
-# Étape 3 : Vérifier si PaxBank est en ligne
+# Étape 3 : Vérifier si PaxBank est bien en ligne
 sleep 10
 curl -I https://TON_URL_RENDER.com
 
 echo "✅ PaxBank devrait être en ligne !"
-
