@@ -1,0 +1,11 @@
+name: Check Revenue
+on:
+  schedule:
+    - cron: '0 * * * *' # Exécuter toutes les heures
+
+jobs:
+  revenue_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Appel de l’API Supabase
+        run: curl -X GET "https://<your-app-url>/api/functions/checkRevenueAndNotifyAdmins"
